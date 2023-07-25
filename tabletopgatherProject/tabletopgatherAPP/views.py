@@ -5,6 +5,6 @@ from tabletopgatherAPP import views
 
 # Create your views here.
 
-
 def index(request):
-    return HttpResponse("Hello, world.")
+    template = loader.get_template("home.html")
+    return HttpResponse(template.render())
