@@ -16,11 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from tabletopgatherAPP import views
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("tabletopgatherAPP/", include("tabletopgatherAPP.urls")),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
-
 ]
